@@ -116,15 +116,15 @@ def sanitize_string(string):
 def display_test_cases():
     description = "Please see the table below. The string in the left column should match the value in the right column"
     test_case_table = {
-        "| cat         |": "       24 |",
-        "| Don't Panic |": "        3 |",
-        "| book        |": "       12 |",
+        "cat": 24,
+        "Don't Panic": 3,
+        "book": 12,
     }
 
     print(description)
 
     for string, hash_value in test_case_table.items():
-        print(string + hash_value)
+        print("| {: <15}" + "|" + "{: >5} |").format(string, hash_value)
 
 
 main()
